@@ -1,0 +1,75 @@
+.card {
+    border: 1px solid var(--black);
+    margin: 2em 0;
+    text-align: center;
+    position: relative;
+    width: 30em;
+    padding: 1em;
+  }
+  
+  .card__button-answer {
+    background: var(--secondary);
+    color: var(--white);
+    border: none;
+    font-size: 1em;
+    padding: 1em;
+  }
+  
+  .card__button-answer:hover {
+    opacity: 0.75;
+    cursor: pointer;
+  }
+  
+  .card__answer {
+    font-style: italic;
+    display: none;
+  }
+  
+  .card__answer--active {
+    display: block;
+  }
+  
+  .card__button-bookmark {
+    position: absolute;
+    right: 1em;
+    top: -1.5em;
+  }
+  
+  .card__tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0.5em;
+  }
+  
+  .card__tag-list-item {
+    background-color: var(--secondary);
+    color: var(--white);
+    border-radius: 0.3em;
+    padding: 0.1em 0.3em;
+  }
+  
+  .card__bookmark {
+    border: none;
+    font-size: 1em;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    background: var(--secondary);
+    color: var(--white);
+  }
+  
+  .card__bookmark:hover {
+    cursor: pointer;
+  }
+  
+  .card__bookmark--active {
+    color: var(--black);
+  }
+  
+  .card__bookmark-icon {
+    fill: currentcolor;
+    width: 2em;
+  }
