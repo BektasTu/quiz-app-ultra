@@ -23,7 +23,7 @@ const cards = [
   },
   {
     id: "8c74c87b-2a68-4aa1-9733-4c6917dfdf88",
-    question: "Which former US president was nicknamed &quot;Teddy&quot; after he refused to shoot a defenseless black bear?",
+    question: "Which former US president was nicknamed Teddy after he refused to shoot a defenseless black bear?",
     answer: "Theodore Roosevelt",
     tags: ["usa", "president", "teddybear"],
     bookmarked: true,
