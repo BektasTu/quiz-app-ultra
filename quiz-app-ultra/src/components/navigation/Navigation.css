@@ -1,49 +1,49 @@
 .navigation {
-    background: var(--primary);
-    border-top: 1px solid var(--black);
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-  }
-  
-  .navigation__list {
-    display: flex;
-    justify-content: space-evenly;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .navigation__list-item {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .navigation__list-item--active {
-    background-color: var(--secondary-light);
-  }
-  
-  .navigation__list-item:not(:first-child) {
-    border-left: 1px solid var(--black);
-  }
-  
-  .navigation__button {
-    background: transparent;
-    border: none;
-    font-size: 1em;
-    padding: 1.5em 0.5em;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .navigation__button:hover {
-    opacity: 0.5;
-    cursor: pointer;
-  }
-  
-  .navigation__icon {
-    height: 1.5em;
-    width: 1.5em;
-  }
+  background: var(--primary);
+  border-top: 1px solid var(--black);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navigation__list {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation__list-item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.navigation__list-item--active {
+  background-color: var(--secondary-light);
+}
+
+.navigation__list-item:not(:first-child) {
+  border-left: 1px solid var(--black);
+}
+
+.navigation__button {
+  background: transparent;
+  border: none;
+  font-size: 1em;
+  padding: 1.5em 0.5em;
+  width: 100%;
+  height: 100%;
+}
+
+.navigation__button:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.navigation__icon {
+  height: 1.5em;
+  width: 1.5em;
+}
