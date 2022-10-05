@@ -1,7 +1,7 @@
 import Card from "../components/card/Card";
 import "./Cards.css";
 
-function Cards({ cards }) {
+function Cards({ cards, onDelete, onBookmark }) {
   return (
     <div className="cards">
       {cards.map((card) => (
@@ -11,6 +11,8 @@ function Cards({ cards }) {
           answer={card.answer}
           tags={card.tags}
           bookmarked={card.bookmarked}
+          onDelete={() => onDelete(card.id)}
+          onBookmark={() => onBookmark(card.id)}
         />
       ))}
     </div>

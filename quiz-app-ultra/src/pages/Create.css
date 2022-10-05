@@ -1,0 +1,14 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    max-width: 25em;
+    margin: 0 auto;
+    font-size: 1rem;
+    gap: 1em;
+  }
+  
+  .form__submit-button {
+    align-self: center;
+    padding: 0.3em;
+    margin-top: 1.5em;
+  }

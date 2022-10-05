@@ -6,7 +6,7 @@ import Cards from "./pages/Cards";
 import Create from "./pages/Create";
 import Profile from "./pages/Profile";
 
-const cards = [
+const initialCards = [
   {
     id: "b5db267b-3275-4a86-a9f4-e7f927d33ed0",
     question: "In the Kingdom Heart series who provides the english voice for Master Eraqus?",
@@ -32,16 +32,55 @@ const cards = [
 
 function App() {
   const [page, setPage] = useState("home");
+  const [cards, setCards] = useState(initialCards);
+
+  function appendCard(question, answer, tag) {
+    setCards((cards) => [
+      ...cards,
+      {
+        question,
+        answer,
+        tags: [tag],
+        id: Math.random().toString(36).substring(2),
+        bookmarked: false,
+      },
+    ]);
+
+    setPage("home");
+  }
+
+  function deleteCard(cardId) {
+    setCards((cards) => cards.filter(({ id }) => cardId !== id));
+  }
+
+  function toggleBookmark(cardId) {
+    setCards((cards) =>
+      cards.map((card) => ({
+        ...card,
+        bookmarked: cardId === card.id ? !card.bookmarked : card.bookmarked,
+      }))
+    );
+  }
 
   return (
     <div className="app">
       <Header />
       <main className="app__main">
-        {page === "home" && <Cards cards={cards} />}
-        {page === "bookmark" && (
-          <Cards cards={cards.filter((card) => card.bookmarked)} />
+        {page === "home" && (
+          <Cards
+            cards={cards}
+            onDelete={deleteCard}
+            onBookmark={toggleBookmark}
+          />
         )}
-        {page === "create" && <Create />}
+        {page === "bookmark" && (
+          <Cards
+            cards={cards.filter((card) => card.bookmarked)}
+            onDelete={deleteCard}
+            onBookmark={toggleBookmark}
+          />
+        )}
+        {page === "create" && <Create onCreate={appendCard} />}
         {page === "profile" && <Profile />}
       </main>
       <Navigation page={page} setPage={setPage} />
