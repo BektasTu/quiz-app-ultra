@@ -19,6 +19,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  box-shadow: inset 0 0 10px var(--secondary-light);
 }
 
 .navigation__list-item--active {

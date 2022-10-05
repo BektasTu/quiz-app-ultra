@@ -5,17 +5,21 @@
   position: relative;
   width: 30em;
   padding: 1em;
+  border-radius: 5px;
 }
 
 .card__button-answer {
-  background: var(--secondary);
-  color: var(--white);
-  border: none;
+  background: linear-gradient(-60deg, #c1df02, #CFFC65, #c1df02);
+  border: solid 1px black;
   font-size: 1em;
   padding: 1em;
+  border-radius: 5px;
+  margin: 15px;
+  box-shadow: 5px 5px 5px black;
 }
 
 .card__button-answer:hover {
+  background-position: right;
   opacity: 0.75;
   cursor: pointer;
 }

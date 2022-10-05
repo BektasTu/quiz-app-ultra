@@ -46,7 +46,7 @@ function App() {
       },
     ]);
 
-    setPage("home");
+    setPage("home"); 
   }
 
   function deleteCard(cardId) {
